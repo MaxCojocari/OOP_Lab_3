@@ -1,6 +1,6 @@
 package actors;
 
-public class ContractAccount implements Account {
+public class ContractAccount extends Account {
     public String address;
     public int nonce;
     public int balanceETH;
@@ -53,4 +53,20 @@ public class ContractAccount implements Account {
         if (amount <= 0) return;
         balanceETH += amount;
     }
+
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+
+    public String nativeCurrency() {
+        return "ETH";
+    };
+
+    public String consensusAlgorithm() {
+        return "PoS";
+    };
 }

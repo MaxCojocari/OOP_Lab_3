@@ -4,8 +4,9 @@ import java.security.*;
 import java.util.ArrayList;
 import actors.Miner;
 import merkletree.MerkleTree;
+import global.EthereumObject;
 
-public class Block {
+public class Block extends EthereumObject{
     public int index;
     public long timestamp;
     public String currHash;
@@ -32,8 +33,8 @@ public class Block {
     public String computeHash() {
         String input = index + timestamp + prevHash + nonce;
 
-        for (Transaction t: transactions) {
-            input += t.getTransactionInfo();
+        for (TransferTx t: transactions) {
+            input += t.transactionInfo();
         }
 
         try {
@@ -72,4 +73,20 @@ public class Block {
         s = s + "Merkle root:\t" + merkleRoot + "\n";
         return s;
     }
+
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+
+    public String nativeCurrency() {
+        return "ETH";
+    };
+
+    public String consensusAlgorithm() {
+        return "PoS";
+    };
 }

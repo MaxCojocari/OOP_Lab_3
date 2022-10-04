@@ -10,18 +10,18 @@ public class TransferTx extends Transaction {
         this.amount = amount;
     }
 
-    public String getTransactionInfo() {
-        String s = "Sender:\t\t" + super.getSender() + "\n";
-        s += "Receiver:\t" + super.getReceiver() + "\n";
+    public String transactionInfo() {
+        String s = "Sender:\t\t" + super.sender() + "\n";
+        s += "Receiver:\t" + super.receiver() + "\n";
         s += "Amount:\t\t" + amount + " " + assetSymbol;
         return s;
     }
 
-    public int getAmount() {
+    public int amount() {
         return amount;
     }
 
-    public String getAssetSymbol() {
+    public String assetSymbol() {
         return assetSymbol;
     }
 }

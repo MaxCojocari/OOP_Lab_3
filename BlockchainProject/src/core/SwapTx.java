@@ -20,10 +20,11 @@ public class SwapTx extends Transaction {
         this.exchangeRate = exchangeRate;
     }
 
-    public String getTransactionInfo() {
-        String s = "Sender:\t\t" + super.getSender() + "\n";
-        s += "Receiver:\t" + super.getReceiver() + "\n";
-        s += "Amount:\t\t" + tokenIn + " " + tokenOut + " " + amountOut();
+    public String transactionInfo() {
+        String s = "Sender:\t\t" + super.sender() + "\n";
+        s += "Receiver:\t" + super.receiver() + "\n";
+        s += "AmountInETH:\t\t" + amountIn + "\n";
+        s += "AmountOutUSDT:\t" + amountOut();
         return s;
     }
 

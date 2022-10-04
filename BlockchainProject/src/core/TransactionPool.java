@@ -1,6 +1,6 @@
 package core;
 
-import java.util.ArrayList;
+import java.util.*;
 import actors.EOAccount;
 import crypto.USDTCoin;
 import crypto.ETHCoin;
@@ -10,7 +10,6 @@ public class TransactionPool {
         "0xC6CDE7C39eB2f0F0095F41570af89eFC2C1Ea828",    
         1000000
     );
-
     private ETHCoin ETH = new ETHCoin(1000000);
 
     public EOAccount alice = new EOAccount(
@@ -37,14 +36,14 @@ public class TransactionPool {
 
     public void getTransactionInfo() {
         for (TransferTx t: T) {
-            System.out.println(t.getTransactionInfo());
+            System.out.println(t.transactionInfo());
         }
     }
 
     public void addTransaction(TransferTx t) {
-        int amount = t.getAmount();
-        String receiver = t.getReceiver();
-        String assetName = t.getAssetSymbol();
+        int amount = t.amount();
+        String receiver = t.receiver();
+        String assetName = t.assetSymbol();
         boolean isUSDT = assetName.equals("USDT");
         boolean success;
 
@@ -65,11 +64,11 @@ public class TransactionPool {
     }
 
     public boolean checkTotalBTC() {
-        return alice.getBalanceUSDT() + bob.getBalanceUSDT() <= USDT.getTotalSupply();
+        return alice.balanceUSDT() + bob.balanceUSDT() <= USDT.totalSupply();
     }
 
     public boolean checkTotalETH() {
-        return alice.getBalanceETH() + bob.getBalanceETH() <= ETH.getTotalSupply();
+        return alice.balanceETH() + bob.balanceETH() <= ETH.totalSupply();
     }
 
     public ArrayList<TransferTx> getPool() {

@@ -1,9 +1,7 @@
 package merkletree;
 
 import java.security.*;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import core.TransferTx;
 
 public class MerkleTree {	
@@ -19,7 +17,7 @@ public class MerkleTree {
 
         for (TransferTx t: leaves) {
             queue.add(
-                new Leaf(computeHash(t.getTransactionInfo()), null, null)
+                new Leaf(computeHash(t.transactionInfo()), null, null)
             );
         }
 
@@ -40,7 +38,7 @@ public class MerkleTree {
 
     public void getLeaves() {
         for (TransferTx t: leaves) {
-            String l = t.getTransactionInfo(); 
+            String l = t.transactionInfo(); 
             leavesObjects.add(new Leaf(computeHash(l), null, null));
         }
 

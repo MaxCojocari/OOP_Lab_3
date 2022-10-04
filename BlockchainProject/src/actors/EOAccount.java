@@ -1,6 +1,6 @@
 package actors;
 
-public class EOAccount implements Account {
+public class EOAccount extends Account {
     public String address;
     public int nonce;
     public int balanceETH;
@@ -53,11 +53,11 @@ public class EOAccount implements Account {
         return true;
     }
 
-    public int getBalanceUSDT() {
+    public int balanceUSDT() {
         return balanceUSDT;
     }
 
-    public int getBalanceETH() {
+    public int balanceETH() {
         return balanceETH;
     }
 }

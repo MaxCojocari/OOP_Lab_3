@@ -1,6 +1,6 @@
 package crypto;
 
-abstract class Currency implements Asset {
+abstract class Currency extends Asset {
     private String name;
     private String symbol;
 

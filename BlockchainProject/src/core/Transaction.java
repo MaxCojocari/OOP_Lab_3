@@ -1,6 +1,8 @@
 package core;
 
-abstract class Transaction {
+import global.EthereumObject;
+
+abstract class Transaction extends EthereumObject {
     private String sender;
     private String receiver;
     private boolean checked;
@@ -11,21 +13,36 @@ abstract class Transaction {
         this.checked = false;
     }
 
-    public abstract String getTransactionInfo();
+    public abstract String transactionInfo();
 
-    public String getSender() {
+    public String sender() {
         return sender;
     }
 
-    public String getReceiver() {
+    public String receiver() {
         return receiver;
     }
 
-    public boolean getChecked() {
+    public boolean isChecked() {
         return checked;
     }
 
     public void setChecked() {
         this.checked = true;
     }
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+
+    public String nativeCurrency() {
+        return "ETH";
+    };
+
+    public String consensusAlgorithm() {
+        return "PoS";
+    };
 }

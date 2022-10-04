@@ -1,9 +1,27 @@
 package crypto;
 
-interface Asset {
-    public String name();
-    public String symbol();
-    public int decimals();
-    public void transfer(int amount, String from, String to);
-    public int balanceOf(String address);
+import global.EthereumObject;
+
+abstract class Asset extends EthereumObject {
+    public abstract String name();
+    public abstract String symbol();
+    public abstract int decimals();
+    public abstract void transfer(int amount, String from, String to);
+    public abstract int balanceOf(String address);
+
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+
+    public String nativeCurrency() {
+        return "ETH";
+    };
+
+    public String consensusAlgorithm() {
+        return "PoS";
+    };
 }

@@ -21,7 +21,7 @@ public class ETHCoin extends Currency {
         return balances.get(address).intValue();
     }
 
-    public int getTotalSupply() {
+    public int totalSupply() {
         return totalSupply;
     }
 }

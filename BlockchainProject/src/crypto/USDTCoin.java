@@ -21,7 +21,7 @@ public class USDTCoin extends Token {
         return owner;
     }
 
-    public int getTotalSupply() {
+    public int totalSupply() {
         return totalSupply;
     }
 
