@@ -20,7 +20,7 @@ Furthermore, the `Object` class is the parent class of all the classes in Java b
 
 For more detailes about inheritance in this project, see the UML class diagrams below.
 
-![oop_lab3_global](https://user-images.githubusercontent.com/92053176/193918237-11006365-a36c-4ed8-baa9-bd40878aee07.png)
+![oop_lab3_global](https://user-images.githubusercontent.com/92053176/194164887-b52a57fc-b676-4f36-8dc1-702218778b57.png)
 ![image](https://user-images.githubusercontent.com/92053176/194158270-60ba3cc1-671b-4b9a-8150-214be6216b8d.png)
 ![oop_lab3_crypto](https://user-images.githubusercontent.com/92053176/194158407-9d8085a6-3fb9-4cf4-ba0e-4421a0453105.png)
 
