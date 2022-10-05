@@ -3,6 +3,10 @@ package actors;
 import global.EthereumObject;
 
 abstract class Account extends EthereumObject {
+    public String address;
+    public int nonce;
+    public int balanceETH;
+
     public abstract String address();
     public abstract int nonce();
     public abstract int balance();

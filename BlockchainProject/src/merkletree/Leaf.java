@@ -1,6 +1,8 @@
 package merkletree;
 
-public class Leaf {
+import global.EthereumObject;
+
+public class Leaf extends EthereumObject{
 	private String hash;
     private Leaf rightChild;
     private Leaf leftChild;
@@ -21,5 +23,21 @@ public class Leaf {
 
     public Leaf rightChild() {
         return rightChild;
-    }    
+    } 
+    
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+    
+    public String nativeCurrency() {
+        return "ETH";
+    };
+    
+    public String consensusAlgorithm() {
+        return "PoS";
+    };   
 }

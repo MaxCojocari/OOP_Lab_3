@@ -1,14 +1,23 @@
 package core;
 
 import java.util.*;
+import actors.EOAccount;
 
-public class Wallet {
+public class Wallet extends EOAccount {
     private String owner;
     private Map<String, Integer> coins = new HashMap<String, Integer>();
 
-    public Wallet (String owner, Map<String, Integer> coins) {
+    public Wallet (
+        String owner, 
+        Map<String, Integer> coins, 
+        String address,
+        int balanceETH,
+        int balanceUSDT 
+    ) {
+        super(address, balanceETH, balanceUSDT);
         this.owner = owner;
         this.coins = coins;
+
     }
 
     public String getOwner() {

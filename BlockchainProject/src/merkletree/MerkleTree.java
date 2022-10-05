@@ -3,8 +3,9 @@ package merkletree;
 import java.security.*;
 import java.util.*;
 import core.TransferTx;
+import global.EthereumObject;
 
-public class MerkleTree {	
+public class MerkleTree extends EthereumObject {	
     private ArrayList<TransferTx> leaves;
     private ArrayList<Leaf> leavesObjects = new ArrayList<Leaf>();
 
@@ -63,4 +64,20 @@ public class MerkleTree {
             throw new RuntimeException(e);
         }
     }
+
+    public int chainId() {
+        return 144;
+    };
+
+    public String currentFork() {
+        return "Paris";
+    };
+    
+    public String nativeCurrency() {
+        return "ETH";
+    };
+    
+    public String consensusAlgorithm() {
+        return "PoS";
+    };
 }
