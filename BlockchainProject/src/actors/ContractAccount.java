@@ -53,20 +53,4 @@ public class ContractAccount extends Account {
         if (amount <= 0) return;
         balanceETH += amount;
     }
-
-    public int chainId() {
-        return 144;
-    };
-
-    public String currentFork() {
-        return "Paris";
-    };
-
-    public String nativeCurrency() {
-        return "ETH";
-    };
-
-    public String consensusAlgorithm() {
-        return "PoS";
-    };
 }
