@@ -8,7 +8,7 @@ In order to run this project, complete the following steps:
 
 - `git clone git@github.com:MaxCojocari/OOP_Lab_3.git`
 - `cd OOP_Lab_3/BlockchainProject`
-- `javac -cp src -d out src/dir/*.java`, where `dir = actors, core, crypto, merkletree`
+- `javac -cp src -d out src/dir/*.java`, where `dir = actors, core, crypto, global, merkletree`
 - `javac -cp src -d out src/*.java`
 - `java -cp out Simulation`
 
